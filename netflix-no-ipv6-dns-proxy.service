@@ -4,7 +4,7 @@ After=network.target
 Wants=network.target
 
 [Service]
-ExecStart=/opt/netflix-no-ipv6-dns-proxy/server.py
+ExecStart=/usr/local/bin/netflix-no-ipv6-dns-proxy.py
 Restart=always
 RestartSec=5
 

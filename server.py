@@ -2,7 +2,7 @@
 
 OPTIONS = {
     # Port to bind to.
-    'listen-port': 53,
+    'listen-port': 54,
 
     # Address to bind to.  '::' will bind IPv6; make sure bindv6only is 0 in
     # your sysctl configuration for this binding to service IPv4 clients, too.
@@ -14,7 +14,7 @@ OPTIONS = {
 
     # Specify one or more servers to proxy to.  Note that Twisted may not be
     # happy if you use an IPv6 address.
-    # 'upstream-dns': [('127.0.0.1', 10053)],
+    'upstream-dns': [('192.168.1.254', 53)],
 
     # Specify a resolv.conf file from which to read upstream nameservers.  As
     # noted above, if you have any upstream IPv6 servers, Twisted may not be
