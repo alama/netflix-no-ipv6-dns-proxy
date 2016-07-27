@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 
 OPTIONS = {
     # Port to bind to.
@@ -7,15 +7,15 @@ OPTIONS = {
     # Address to bind to.  '::' will bind IPv6; make sure bindv6only is 0 in
     # your sysctl configuration for this binding to service IPv4 clients, too.
     # ("cat /proc/sys/net/ipv6/bindv6only" to verify.)
-    'listen-address4': '192.168.1.200',
-    'listen-address6': '2001:470:1996::200',
+    'listen-address4': '0.0.0.0',
+    'listen-address6': '::',
 
     # Here is where you configure what DNS server to proxy to.  You must
     # specify exactly one of the following options; comment out the other.
 
     # Specify one or more servers to proxy to.  Note that Twisted may not be
     # happy if you use an IPv6 address.
-    'upstream-dns': [('127.0.0.1', 5553)],
+    # 'upstream-dns': [('127.0.0.1', 10053)],
 
     # Specify a resolv.conf file from which to read upstream nameservers.  As
     # noted above, if you have any upstream IPv6 servers, Twisted may not be
