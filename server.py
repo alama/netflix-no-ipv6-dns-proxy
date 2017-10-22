@@ -45,7 +45,7 @@ class BlockNetflixAAAAResolver(object):
             return False
         penultimateDomainPart = parts[-2]
 
-        return query.type == dns.AAAA and penultimateDomainPart in (b'netflix', b'nflximg', b'nflxext', b'nflxvideo', b'nflxso')
+        return query.type == dns.AAAA and penultimateDomainPart in (b'netflix', b'nflximg', b'nflxext', b'nflxvideo', b'nflxso', b'lync')
 
     def query(self, query, timeout=None):
         if self.__shouldBlock(query):
